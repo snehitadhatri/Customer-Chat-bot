@@ -1,0 +1,32 @@
+{
+    "greeting": {
+        "patterns": ["hi", "hello", "hey", "good morning", "good evening"],
+        "responses": ["Hello! How can I assist you today?", "Hi there! What can I help you with?"]
+    },
+    "order_status": {
+        "patterns": ["where is my order", "track order", "order status", "order update"],
+        "responses": ["Please provide your order ID so I can check the status for you."]
+    },
+    "refund_policy": {
+        "patterns": ["refund", "return policy", "money back", "cancel order"],
+        "responses": ["You can return products within 30 days of delivery. For more help, type 'contact support'."]
+    },
+    "goodbye": {
+        "patterns": ["bye", "goodbye", "see you", "exit"],
+        "responses": ["Goodbye! Have a great day!", "See you soon!"]
+    },
+
+    "product_inquiry": {
+        "patterns": ["tell me about product", "product details", "information on product"],
+        "responses": ["Sure! Please specify which product you are interested in."]
+    },
+    "payment_issue": {
+        "patterns": ["payment failed", "issue with payment", "payment not going through"],
+        "responses": ["I’m sorry to hear that. Please check your payment details or try again later."]
+    },
+    "technical_support": {
+        "patterns": ["technical issue", "help with app", "software problem"],
+        "responses": ["Please describe the technical issue you are facing, and I will do my best to assist you."]
+    }
+}
+ 
