@@ -1,20 +1,35 @@
-import faiss
-import pickle
-from sentence_transformers import SentenceTransformer
-import numpy as np
+import json
+from vector_store import VectorStore
+import openai
 
-MODEL_NAME = "all-MiniLM-L6-v2"
-FAISS_INDEX_PATH = "models/faiss_index.index"
-EMBEDDINGS_PATH = "models/embeddings.pkl"
+openai.api_key = "YOUR_OPENAI_API_KEY"  # Replace with your key
 
-def load_faiss_index():
-    index = faiss.read_index(FAISS_INDEX_PATH)
-    with open(EMBEDDINGS_PATH, "rb") as f:
-        embeddings = pickle.load(f)
-    return index, embeddings
+class ChatBot:
+    def __init__(self):
+        self.vs = VectorStore()
+        self.responses = self.load_responses()
 
-def get_chatbot_response(query, index, embeddings):
-    model = SentenceTransformer(MODEL_NAME)
-    query_vector = model.encode([query])
-    D, I = index.search(np.array(query_vector).astype("float32"), k=1)
-    return embeddings[I[0][0]]["text"]
+    def load_responses(self):
+        with open("responses.json", "r") as f:
+            return json.load(f)
+
+    def get_response(self, query):
+        context = self.vs.search(query)
+        if context:
+            full_prompt = f"Context:\n{context}\n\nQuestion: {query}\nAnswer:"
+            return self.ask_llm(full_prompt)
+        return self.ask_llm(query)
+
+    def ask_llm(self, prompt):
+        try:
+            completion = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",
+                messages=[{"role": "system", "content": "You are a helpful customer support assistant."},
+                          {"role": "user", "content": prompt}]
+            )
+            return completion.choices[0].message["content"].strip()
+        except Exception as e:
+            return f"⚠️ Error: {e}"
+
+    def update_knowledge_base(self, file_path):
+        self.vs.add_document(file_path)
