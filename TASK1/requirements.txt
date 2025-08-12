@@ -1,11 +1,6 @@
 streamlit
 faiss-cpu
-sentence-transformers
-langchain
-langchain-community
-langchain-core
-langchain-text-splitters
-openai
-tqdm
-numpy
-pandas
+scikit-learn
+transformers
+torch
+PyPDF2
