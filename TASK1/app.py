@@ -1,26 +1,34 @@
 import streamlit as st
-from utils.chatbot_logic import get_chatbot_response, load_faiss_index
+from chatbot import ChatBot
+from utils import save_uploaded_file
 
-st.set_page_config(page_title="Gen AI Customer Support Bot", layout="centered")
-st.title("💬 Real-Time Gen AI Customer Support Bot")
+# Initialize chatbot
+bot = ChatBot()
 
-# Load FAISS index
-index, embeddings = load_faiss_index()
+st.set_page_config(page_title="Real-Time Gen AI Customer Support Bot", layout="wide")
+st.title("🤖 Real-Time Gen AI Customer Support Bot")
 
-# Chat session
+# Chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# Display chat history
-for message in st.session_state.messages:
-    role = "🤖 Bot" if message["role"] == "bot" else "🧑 You"
-    st.markdown(f"**{role}:** {message['content']}")
+# Upload new files to knowledge base
+uploaded_file = st.file_uploader("📂 Upload file to expand knowledge base", type=["txt", "pdf"])
+if uploaded_file:
+    file_path = save_uploaded_file(uploaded_file, "data/new_uploads")
+    bot.update_knowledge_base(file_path)
+    st.success("✅ Knowledge base updated successfully!")
+
+# Display chat
+for msg in st.session_state.messages:
+    st.chat_message(msg["role"]).markdown(msg["content"])
 
 # User input
-user_input = st.text_input("Type your question:")
+if prompt := st.chat_input("Type your query..."):
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    st.chat_message("user").markdown(prompt)
 
-if st.button("Send") and user_input.strip():
-    st.session_state.messages.append({"role": "user", "content": user_input})
-    bot_reply = get_chatbot_response(user_input, index, embeddings)
-    st.session_state.messages.append({"role": "bot", "content": bot_reply})
-    st.experimental_rerun()
+    with st.spinner("Thinking..."):
+        response = bot.get_response(prompt)
+    st.session_state.messages.append({"role": "assistant", "content": response})
+    st.chat_message("assistant").markdown(response)
