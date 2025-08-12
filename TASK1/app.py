@@ -1,34 +1,37 @@
 import streamlit as st
-from chatbot import ChatBot
-from utils import save_uploaded_file
+import pickle
+import faiss
+import os
+import json
+from knowledge_base import add_document, search_query
+from chatbot_logic import generate_response
 
-# Initialize chatbot
-bot = ChatBot()
+# Load model & vectorizer
+with open("chatbot_model.pkl", "rb") as f:
+    model = pickle.load(f)
+with open("vectorizer.pkl", "rb") as f:
+    vectorizer = pickle.load(f)
 
-st.set_page_config(page_title="Real-Time Gen AI Customer Support Bot", layout="wide")
-st.title("🤖 Real-Time Gen AI Customer Support Bot")
+# Load FAISS index
+if os.path.exists("faiss_index.index"):
+    index = faiss.read_index("faiss_index.index")
+else:
+    index = None
 
-# Chat history
-if "messages" not in st.session_state:
-    st.session_state.messages = []
+# Streamlit UI
+st.set_page_config(page_title="Real-Time GenAI Customer Support Bot", layout="wide")
+st.title("🤖 Real-Time GenAI Customer Support Bot")
 
-# Upload new files to knowledge base
-uploaded_file = st.file_uploader("📂 Upload file to expand knowledge base", type=["txt", "pdf"])
-if uploaded_file:
-    file_path = save_uploaded_file(uploaded_file, "data/new_uploads")
-    bot.update_knowledge_base(file_path)
-    st.success("✅ Knowledge base updated successfully!")
+# File upload section
+uploaded_file = st.file_uploader("📂 Upload a .txt or .pdf document to expand knowledge base", type=["txt", "pdf"])
+if uploaded_file is not None:
+    add_document(uploaded_file)
+    st.success("✅ Knowledge base updated with uploaded file!")
 
-# Display chat
-for msg in st.session_state.messages:
-    st.chat_message(msg["role"]).markdown(msg["content"])
-
-# User input
-if prompt := st.chat_input("Type your query..."):
-    st.session_state.messages.append({"role": "user", "content": prompt})
-    st.chat_message("user").markdown(prompt)
-
-    with st.spinner("Thinking..."):
-        response = bot.get_response(prompt)
-    st.session_state.messages.append({"role": "assistant", "content": response})
-    st.chat_message("assistant").markdown(response)
+# Chat section
+user_input = st.text_input("💬 Ask your question:")
+if st.button("Send"):
+    if user_input.strip():
+        faiss_result = search_query(user_input)
+        bot_response = generate_response(user_input, faiss_result)
+        st.markdown(f"**Bot:** {bot_response}")
