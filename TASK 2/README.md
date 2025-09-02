@@ -32,22 +32,22 @@ TASK 2/
    ```bash
    git clone https://github.com/yourusername/multimodal_chatbot.git
    cd multimodal_chatbot
-  ```
+   ```
 
 2. Install dependencies:
-  ```bash
-  pip install -r requirements.txt
-  ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 3. Add your Gemini API Key in gemini_client.py:
-  ```python
-  genai.configure(api_key="YOUR_API_KEY_HERE")
-  ```
+   ```python
+   genai.configure(api_key="YOUR_API_KEY_HERE")
+   ```
 
 4. Run the chatbot:
-  ```bash
-  streamlit run app.py
-  ```
+   ```bash
+   streamlit run app.py
+   ```
 
 ## 📝 Notes
 Gemini currently understands images but does not generate images (that’s handled by Google Imagen).
