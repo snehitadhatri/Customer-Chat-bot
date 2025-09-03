@@ -89,4 +89,4 @@ MedQuAD-MedQA/
 
 ## 📜 License
 
-This project is for research and educational purposes. Please refer to the original [MedQuAD dataset license](https://github.com/abachaa/MedQuAD).
+Please refer to the original [MedQuAD dataset license](https://github.com/abachaa/MedQuAD).
