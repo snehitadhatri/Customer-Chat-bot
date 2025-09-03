@@ -144,6 +144,3 @@ jupyter
 
 ---
 
-## 📜 License
-
-MIT License © 2025
