@@ -1,0 +1,22 @@
+{
+  "english": [
+    "Hello! How can I help you today?",
+    "I'm here to assist you. What do you need?",
+    "Nice to meet you! Let's chat."
+  ],
+  "spanish": [
+    "¡Hola! ¿Cómo puedo ayudarte hoy?",
+    "Estoy aquí para ayudarte. ¿Qué necesitas?",
+    "¡Encantado de conocerte! Vamos a hablar."
+  ],
+  "french": [
+    "Bonjour! Comment puis-je vous aider aujourd'hui?",
+    "Je suis là pour vous aider. Que voulez-vous?",
+    "Ravi de vous rencontrer! Parlons-en."
+  ],
+  "hindi": [
+    "नमस्ते! मैं आपकी किस प्रकार मदद कर सकता हूँ?",
+    "मैं यहाँ आपकी मदद करने के लिए हूँ। आपको क्या चाहिए?",
+    "आपसे मिलकर खुशी हुई! चलिए बात करते हैं।"
+  ]
+}
