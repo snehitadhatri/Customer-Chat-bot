@@ -62,7 +62,7 @@ Provides an interactive Streamlit UI
 
 ### 🧑‍💻 Author
 * Name: Snehita Dhatri
-* Internship Role: AI Developer Intern
+* Internship Role: Data Science Intern
 * Organization: NullClass
 
 
