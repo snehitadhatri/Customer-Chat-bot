@@ -14,6 +14,7 @@ It extends a customer support chatbot to handle **text + image queries** using *
 ---
 
 ## 📂 Project Structure
+```
 TASK 2/
 │── app.py # Main Streamlit app
 │── gemini_client.py # Gemini API calls
@@ -24,7 +25,7 @@ TASK 2/
 │ └── system_prompt.txt
 
 └── system_prompt.txt
-
+```
 ---
 
 ## ⚙️ Installation & Setup
@@ -60,10 +61,10 @@ Generates relevant responses
 Provides an interactive Streamlit UI
 
 ### 🧑‍💻 Author
-Name: Snehita Dhatri
-Internship Role: AI Developer Intern
-Organization: NullClass
-Task: 1 - Real-Time Gen AI Customer Support Bot
+* Name: Snehita Dhatri
+* Internship Role: AI Developer Intern
+* Organization: NullClass
+
 
 ### 📜License
 This is for educational purpose only
