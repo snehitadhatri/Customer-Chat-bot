@@ -98,7 +98,3 @@ Task: 1 - Real-Time Gen AI Customer Support Bot
 
 ### 📜 License
 This project is for academic and internship use only.
-
-
-👩‍💻 Author
-Snehita Dhatri - Intern at NULL CLASS
