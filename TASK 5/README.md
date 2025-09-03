@@ -27,6 +27,7 @@ TASK 5/
 │── train_sentiment.ipynb # Training notebook for sentiment model
 │── requirements.txt # Dependencies
 │── README.md # Project documentation
+|── sentiment_data.csv #Sample dataset
 ```
 ---
 
