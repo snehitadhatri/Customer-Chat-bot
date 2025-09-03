@@ -59,11 +59,11 @@ TASK 5/
 
 ### 🧪 Example Interaction
 
-You: "I’m really upset with the service."
-Bot: "I’m sorry you feel this way 😔. Let me try to resolve this for you. (Detected: negative)"
+  You: "I’m really upset with the service."
+  Bot: "I’m sorry you feel this way 😔. Let me try to resolve this for you. (Detected: negative)"
 
-You: "This is great, thank you!"
-Bot: "I’m glad to hear that! 😊 How else can I assist you? (Detected: positive)"
+  You: "This is great, thank you!"
+  Bot: "I’m glad to hear that! 😊 How else can I assist you? (Detected: positive)"
 
 ### 📊 Evaluation Criteria
 * Accuracy of sentiment detection
@@ -76,10 +76,9 @@ Bot: "I’m glad to hear that! 😊 How else can I assist you? (Detected: positi
 * Personalize empathetic responses based on context
 
 ### 🧑‍💻 Author
-Name: Snehita Dhatri
-Internship Role: AI Developer Intern
-Organization: NullClass
-Task: 1 - Real-Time Gen AI Customer Support Bot
+* Name: Snehita Dhatri
+* Internship Role: AI Developer Intern
+* Organization: NullClass
 
 ### 📜 License
 This is for educational purpose only
