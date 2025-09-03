@@ -45,4 +45,11 @@ Add more languages
 Use LLM-based contextual answers
 Improve cultural adaptation
 
-## 
+## 🧑‍💻 Author
+* Name: Snehita Dhatri
+* Internship Role: AI Developer Intern
+* Organization: NullClass
+
+### 📜 License
+This project is for academic and internship use only.
+
