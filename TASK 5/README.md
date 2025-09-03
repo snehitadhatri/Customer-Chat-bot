@@ -18,6 +18,7 @@ The chatbot integrates **sentiment analysis** into customer interactions, allowi
 ---
 
 ### 📂 Folder Structure
+```
 TASK 5/
 │── app.py # Streamlit UI for chatbot
 │── sentiment_model.pkl # Trained sentiment model
@@ -26,7 +27,7 @@ TASK 5/
 │── train_sentiment.ipynb # Training notebook for sentiment model
 │── requirements.txt # Dependencies
 │── README.md # Project documentation
-
+```
 ---
 
 
