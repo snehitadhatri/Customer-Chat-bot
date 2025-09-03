@@ -5,7 +5,7 @@ The chatbot integrates **sentiment analysis** into customer interactions, allowi
 
 ---
 
-## 🚀 Features
+### 🚀 Features
 - Real-time customer interaction via **Streamlit UI**
 - Sentiment detection using **TF-IDF + Logistic Regression**
 - Predefined empathetic responses for:
@@ -17,7 +17,7 @@ The chatbot integrates **sentiment analysis** into customer interactions, allowi
 
 ---
 
-## 📂 Folder Structure
+### 📂 Folder Structure
 TASK 5/
 │── app.py # Streamlit UI for chatbot
 │── sentiment_model.pkl # Trained sentiment model
@@ -32,7 +32,7 @@ TASK 5/
 
 ---
 
-## ⚙️ Installation & Setup
+### ⚙️ Installation & Setup
 
 1. Clone this repository:
    ```bash
@@ -48,7 +48,7 @@ TASK 5/
    ```bash
    streamlit run app.py
 
-🎯 Usage
+### 🎯 Usage
 
 * Type a message in the input box.
 * The chatbot will:
@@ -56,7 +56,7 @@ TASK 5/
   2. Reply with an empathetic response.
 * Sentiment detection is displayed along with the response.
 
-🧪 Example Interaction
+### 🧪 Example Interaction
 
 You: "I’m really upset with the service."
 Bot: "I’m sorry you feel this way 😔. Let me try to resolve this for you. (Detected: negative)"
@@ -64,15 +64,21 @@ Bot: "I’m sorry you feel this way 😔. Let me try to resolve this for you. (D
 You: "This is great, thank you!"
 Bot: "I’m glad to hear that! 😊 How else can I assist you? (Detected: positive)"
 
-📊 Evaluation Criteria
+### 📊 Evaluation Criteria
 * Accuracy of sentiment detection
 * Appropriateness of chatbot responses
 * Customer satisfaction during simulated interactions
 
-🔮 Future Improvements
+### 🔮 Future Improvements
 * Use pretrained transformers (BERT, RoBERTa) for sentiment detection
 * Add multi-language support
 * Personalize empathetic responses based on context
 
-👩‍💻 Author
-Snehita Dhatri - Intern at NULL CLASS
+### 🧑‍💻 Author
+Name: Snehita Dhatri
+Internship Role: AI Developer Intern
+Organization: NullClass
+Task: 1 - Real-Time Gen AI Customer Support Bot
+
+### 📜 License
+This is for educational purpose only
