@@ -14,7 +14,7 @@ The bot can:
 ---
 
 ## 🔧 Folder Structure
-
+```
 📁 real-time-genai-customer-support-bot/
 ├── app.py
 ├── train_model.ipynb
@@ -23,7 +23,7 @@ The bot can:
 ├── vectorizer.pkl
 ├── .gitignore
 └── README.md
-
+```
 ---
 
 ## 🚀 Getting Started
@@ -89,10 +89,9 @@ Then copy the ngrok public URL printed in the terminal (e.g., https://1234-56-78
 ---
 
 ### 🧑‍💻 Author
-Name: Snehita Dhatri
-Internship Role: AI Developer Intern
-Organization: NullClass
-Task: 1 - Real-Time Gen AI Customer Support Bot
+* Name: Snehita Dhatri
+* Internship Role: AI Developer Intern
+* Organization: NullClass
 
 ---
 
