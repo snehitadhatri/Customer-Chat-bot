@@ -1,0 +1,17 @@
+streamlit
+transformers>=4.30.0
+sentence-transformers
+faiss-cpu
+spacy
+nltk
+networkx
+pyvis
+pandas
+tqdm
+scikit-learn
+torch
+python-dotenv
+sentencepiece
+huggingface-hub
+datasets
+yake
