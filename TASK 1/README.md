@@ -24,6 +24,7 @@ The bot can:
 ├── .gitignore
 └── README.md
 ```
+
 ---
 
 ## 🚀 Getting Started
