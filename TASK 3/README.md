@@ -87,10 +87,9 @@ MedQuAD-MedQA/
 
 ---
 ### 🧑‍💻 Author
-Name: Snehita Dhatri
-Internship Role: AI Developer Intern
-Organization: NullClass
-Task: 1 - Real-Time Gen AI Customer Support Bot
+* Name: Snehita Dhatri
+* Internship Role: AI Developer Intern
+* Organization: NullClass
 
 ---
 ## 📜 License
