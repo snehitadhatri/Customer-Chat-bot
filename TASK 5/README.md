@@ -81,4 +81,4 @@ TASK 5/
 * Organization: NullClass
 
 ### 📜 License
-This is for educational purpose only
+This project is for academic and internship use only.
