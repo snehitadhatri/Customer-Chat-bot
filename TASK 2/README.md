@@ -58,3 +58,12 @@ A chatbot that:
 Understands user queries (text + image)
 Generates relevant responses
 Provides an interactive Streamlit UI
+
+### 🧑‍💻 Author
+Name: Snehita Dhatri
+Internship Role: AI Developer Intern
+Organization: NullClass
+Task: 1 - Real-Time Gen AI Customer Support Bot
+
+### 📜License
+This is for educational purpose only
