@@ -47,7 +47,7 @@ Improve cultural adaptation
 
 ## 🧑‍💻 Author
 * Name: Snehita Dhatri
-* Internship Role: AI Developer Intern
+* Internship Role: Data Science Intern
 * Organization: NullClass
 
 ### 📜 License
