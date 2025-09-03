@@ -91,7 +91,7 @@ Then copy the ngrok public URL printed in the terminal (e.g., https://1234-56-78
 
 ### 🧑‍💻 Author
 * Name: Snehita Dhatri
-* Internship Role: AI Developer Intern
+* Internship Role: Data Science Intern
 * Organization: NullClass
 
 ---
