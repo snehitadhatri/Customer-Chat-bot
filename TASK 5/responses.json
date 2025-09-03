@@ -1,0 +1,14 @@
+{
+  "positive": [
+    "I’m glad to hear that! 😊 How else can I assist you?",
+    "That’s wonderful! Let me know what else you’d like help with."
+  ],
+  "negative": [
+    "I’m sorry you feel this way 😔. Let me try to resolve this for you.",
+    "I understand your frustration. I’ll do my best to help."
+  ],
+  "neutral": [
+    "Got it. Let’s continue with your request.",
+    "Thanks for sharing. How can I assist further?"
+  ]
+}
