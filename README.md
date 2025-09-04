@@ -76,4 +76,6 @@ These projects simulate real-world customer support scenarios, showcasing how Ge
 ## 👤 Author
 
 Snehita Dhatri
+```
 Data Science Intern | Null Class Internship
+```
